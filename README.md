@@ -1,4 +1,4 @@
-=======
+
 # ☕ Plataforma Web para Cafetería
 
 Aplicación web desarrollada con **React, Vite, TypeScript y TailwindCSS** que permite mostrar los productos de una cafetería, información del negocio, ubicaciones y facilitar pedidos mediante **WhatsApp con un mensaje predeterminado**.
