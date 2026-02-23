@@ -39,16 +39,9 @@ src
  ├─ pages
  ├─ assets
  └─ styles
-📱 Pedidos por WhatsApp
-
-Cada producto incluye un botón que abre una conversación de WhatsApp con un mensaje automático para facilitar el proceso de compra.
-
-Ejemplo de mensaje:
-
-Hola, me gustaría pedir este producto.
 ⚙ Instalación y ejecución
-git clone https://github.com/tu-usuario/tu-repositorio.git
-cd tu-repositorio
+git clone https://github.com/IvanMenor/Cafeter-a-Web.git
+cd Cafeter-a-Web
 npm install
 npm run dev
 💡 Posibles mejoras a futuro
