@@ -6,11 +6,13 @@ import Inicio from './pages/Inicio'
 import Menu from './pages/Menu'
 import Delivery from "./pages/Delivery"
 import Nosotros from "./pages/Nosotros"
+import ScrollToTop from "./components/ScrollToTop"
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Inicio />} />

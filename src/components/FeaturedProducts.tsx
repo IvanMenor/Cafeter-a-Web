@@ -1,4 +1,5 @@
 import { products } from "../data/products"
+import { Link } from "react-router-dom"
 
 export default function FeaturedProducts() {
 
@@ -55,9 +56,12 @@ export default function FeaturedProducts() {
                     S/ {product.price.toFixed(2)}
                   </span>
 
-                  <button className="bg-amber-700 text-white px-4 py-2 rounded-lg text-sm hover:bg-amber-800 transition">
-                    Ver
-                  </button>
+<Link
+  to="/Menu"
+  className="bg-amber-700 text-white px-4 py-2 rounded-lg text-sm hover:bg-amber-800 transition"
+>
+  Ver
+</Link>
 
                 </div>
 

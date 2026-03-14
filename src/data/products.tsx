@@ -6,7 +6,7 @@ export const products: Product[] = [
     id: 1,
     name: "Frappe de Moca",
     price: 10,
-    image: "../public/frappe-moca.jpg",
+    image: "../public/moka.png",
     description: "Frappe cremoso de café con chocolate y hielo, perfecto para refrescarte.",
     category: "bebidasFrias",
     featured: true
@@ -15,7 +15,7 @@ export const products: Product[] = [
     id: 2,
     name: "Frappe de Óreo",
     price: 10,
-    image: "../public/frappe-oreo.jpg",
+    image: "../public/oreo.png",
     description: "Delicioso frappe con galletas Óreo trituradas y crema.",
     category: "bebidasFrias"
   },
@@ -23,7 +23,7 @@ export const products: Product[] = [
     id: 3,
     name: "Frappe de Chocolate",
     price: 10,
-    image: "../public/frappe-chocolate.jpg",
+    image: "../public/frappe-chocolate.png",
     description: "Bebida fría de chocolate con textura cremosa y mucho sabor.",
     category: "bebidasFrias"
   },
@@ -31,7 +31,7 @@ export const products: Product[] = [
     id: 4,
     name: "Frappe de Fresa",
     price: 10,
-    image: "../public/frappe-fresa.jpg",
+    image: "../public/fresa.png",
     description: "Refrescante frappe preparado con fresa natural.",
     category: "bebidasFrias"
   },
@@ -39,7 +39,7 @@ export const products: Product[] = [
     id: 5,
     name: "Frappe de Fresa con Arándanos",
     price: 10,
-    image: "../public/frappe-fresa-arandanos.jpg",
+    image: "../public/fresa-arandano.png",
     description: "Mezcla frutal de fresa y arándanos con hielo frappé.",
     category: "bebidasFrias"
   },
@@ -47,7 +47,7 @@ export const products: Product[] = [
     id: 6,
     name: "Frappe de Maracumango",
     price: 10,
-    image: "../public/frappe-maracumango.jpg",
+    image: "../public/maracumango.png",
     description: "Exótica mezcla de maracuyá y mango en una bebida helada.",
     category: "bebidasFrias"
   },
@@ -55,7 +55,7 @@ export const products: Product[] = [
     id: 7,
     name: "Frappe de Caramelo",
     price: 10,
-    image: "../public/frappe-caramelo.jpg",
+    image: "../public/caramelo.png",
     description: "Frappe suave con caramelo dulce y crema.",
     category: "bebidasFrias"
   },
@@ -63,7 +63,7 @@ export const products: Product[] = [
     id: 8,
     name: "Frappe de Algarrobina",
     price: 10,
-    image: "../public/frappe-algarrobina.jpg",
+    image: "../public/algarrobina.png",
     description: "Sabor peruano clásico con algarrobina y hielo frappé.",
     category: "bebidasFrias"
   },
@@ -71,7 +71,7 @@ export const products: Product[] = [
     id: 9,
     name: "Frappe de Lúcuma",
     price: 10,
-    image: "../public/frappe-lucuma.jpg",
+    image: "../public/lucuma.png",
     description: "Frappe dulce de lúcuma con textura cremosa.",
     category: "bebidasFrias"
   },
@@ -81,7 +81,7 @@ export const products: Product[] = [
     id: 10,
     name: "Expresso",
     price: 4,
-    image: "../public/expresso.jpg",
+    image: "../public/expresso.png",
     description: "Café espresso intenso preparado al momento.",
     category: "bebidasCalientes"
   },
@@ -89,7 +89,7 @@ export const products: Product[] = [
     id: 11,
     name: "Americano",
     price: 5,
-    image: "../public/americano.jpg",
+    image: "../public/americano.png",
     description: "Café espresso suavizado con agua caliente.",
     category: "bebidasCalientes"
   },
@@ -97,7 +97,7 @@ export const products: Product[] = [
     id: 12,
     name: "Capuchino",
     price: 7,
-    image: "../public/capuchino.jpg",
+    image: "../public/capu.png",
     description: "Espresso con leche vaporizada y espuma cremosa.",
     category: "bebidasCalientes",
     featured: true
@@ -106,7 +106,7 @@ export const products: Product[] = [
     id: 13,
     name: "Mocachino",
     price: 8,
-    image: "../public/mocachino.jpg",
+    image: "../public/mocaccino.png",
     description: "Mezcla de café, chocolate y leche espumada.",
     category: "bebidasCalientes"
   },
@@ -114,7 +114,7 @@ export const products: Product[] = [
     id: 14,
     name: "Chocolate Caliente",
     price: 8,
-    image: "../public/chocolate.jpg",
+    image: "../public/chocolate.png",
     description: "Chocolate caliente cremoso ideal para acompañar postres.",
     category: "bebidasCalientes"
   },
@@ -156,7 +156,7 @@ export const products: Product[] = [
     id: 19,
     name: "Croasant de Pollo",
     price: 8,
-    image: "../public/croasant-pollo.jpg",
+    image: "../public/croasam.png",
     description: "Croasant relleno de pollo deshilachado, lechuga, mayonesa y apio.",
     category: "comida",
     featured: true

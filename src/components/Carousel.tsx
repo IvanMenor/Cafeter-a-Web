@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 const images = [
   "/tazacafe.jpg",
-  "/tazacafe.jpg",
+  "/image.png",
   "/tazacafe.jpg",
   "/tazacafe.jpg",
   "/tazacafe.jpg",
@@ -45,7 +45,7 @@ const Carousel = () => {
   }, [isPaused]);
 
   return (
-    <section className="bg-[#E8E3DC] py-15">
+    <section className="bg-[#E8E3DC] py-5">
       <div className="max-w-7xl mx-auto px-8">
 
         {/* TÍTULO */}
