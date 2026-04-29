@@ -1,12 +1,14 @@
-import { useState} from "react";
 import '../App.css'
 import Footer from '../components/Footer'
 import ProcesoCafe from "../components/ProcesoCafe";
+import HeroNosotros from "../components/HeroNosotros";
+import IntroProceso from "../components/IntroProceso";
 
 function Nosotros(){
-    const [count, setCount] = useState(0)
     return(
         <>
+        <HeroNosotros />
+        <IntroProceso />
         <ProcesoCafe />
         <Footer />
         </>

@@ -1,5 +1,5 @@
-import React, { ElementType, ReactNode, useEffect, useState } from "react"
-
+import { Children, useEffect, useState } from "react"
+import type { ElementType, ReactNode } from "react"
 import { cn } from "@/lib/utils"
 
 export interface VideoTextProps {
@@ -79,7 +79,7 @@ export function VideoText({
   as: Component = "div",
 }: VideoTextProps) {
   const [svgMask, setSvgMask] = useState("")
-  const content = React.Children.toArray(children).join("")
+  const content = Children.toArray(children).join("")
 
   useEffect(() => {
     const updateSvgMask = () => {
