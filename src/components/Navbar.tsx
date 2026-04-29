@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,6 +14,14 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
 
   return (
     <nav
@@ -26,7 +36,7 @@ const Navbar = () => {
         {/* Logo + texto */}
         <div className="flex items-center gap-3">
           <img
-            src="/public/ronellogo.png"
+            src="/ronellogo.png"
             alt="logo"
             className="h-12 md:h-14 w-auto object-contain"
           />
@@ -42,25 +52,65 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Links */}
-<ul className="hidden md:flex gap-8 text-[#3A2E23] font-medium">
-  <li className="hover:text-[#A76B2B] cursor-pointer">
-    <Link to="/">Inicio</Link>
-  </li>
+        {/* Links Desktop */}
+        <ul className="hidden md:flex gap-8 text-[#3A2E23] font-medium">
+          <li className="hover:text-[#A76B2B] cursor-pointer transition">
+            <Link to="/">Inicio</Link>
+          </li>
 
-  <li className="hover:text-[#A76B2B] cursor-pointer">
-    <Link to="/menu">Menú Local</Link>
-  </li>
+          <li className="hover:text-[#A76B2B] cursor-pointer transition">
+            <Link to="/menu">Menú Local</Link>
+          </li>
 
-  <li className="hover:text-[#A76B2B] cursor-pointer">
-    <Link to="/delivery">Delivery</Link>
-  </li>
+          <li className="hover:text-[#A76B2B] cursor-pointer transition">
+            <Link to="/delivery">Delivery</Link>
+          </li>
 
-  <li className="hover:text-[#A76B2B] cursor-pointer">
-    <Link to="/nosotros">Nosotros</Link>
-  </li>
-</ul>
+          <li className="hover:text-[#A76B2B] cursor-pointer transition">
+            <Link to="/nosotros">Nosotros</Link>
+          </li>
+        </ul>
+
+        {/* Hamburger Menu Button */}
+        <button
+          className="md:hidden text-[#3A2E23] p-2"
+          onClick={toggleMobileMenu}
+          aria-label="Toggle menu"
+        >
+          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
       </div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-[#E8E3DC] border-t border-[#D4C9BD] shadow-lg">
+          <ul className="flex flex-col gap-0 text-[#3A2E23] font-medium px-6 py-4">
+            <li className="hover:text-[#A76B2B] cursor-pointer transition py-3 border-b border-[#D4C9BD]">
+              <Link to="/" onClick={closeMobileMenu}>
+                Inicio
+              </Link>
+            </li>
+
+            <li className="hover:text-[#A76B2B] cursor-pointer transition py-3 border-b border-[#D4C9BD]">
+              <Link to="/menu" onClick={closeMobileMenu}>
+                Menú Local
+              </Link>
+            </li>
+
+            <li className="hover:text-[#A76B2B] cursor-pointer transition py-3 border-b border-[#D4C9BD]">
+              <Link to="/delivery" onClick={closeMobileMenu}>
+                Delivery
+              </Link>
+            </li>
+
+            <li className="hover:text-[#A76B2B] cursor-pointer transition py-3">
+              <Link to="/nosotros" onClick={closeMobileMenu}>
+                Nosotros
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
     </nav>
   );
 };

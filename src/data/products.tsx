@@ -6,7 +6,7 @@ export const products: Product[] = [
     id: 1,
     name: "Frappe de Moca",
     price: 10,
-    image: "../public/moka.png",
+    image: "/moka.png",
     description: "Frappe cremoso de café con chocolate y hielo, perfecto para refrescarte.",
     category: "bebidasFrias",
     featured: true
@@ -15,7 +15,7 @@ export const products: Product[] = [
     id: 2,
     name: "Frappe de Óreo",
     price: 10,
-    image: "../public/oreo.png",
+    image: "/oreo.png",
     description: "Delicioso frappe con galletas Óreo trituradas y crema.",
     category: "bebidasFrias"
   },
@@ -23,7 +23,7 @@ export const products: Product[] = [
     id: 3,
     name: "Frappe de Chocolate",
     price: 10,
-    image: "../public/frappe-chocolate.png",
+    image: "/frappe-chocolate.png",
     description: "Bebida fría de chocolate con textura cremosa y mucho sabor.",
     category: "bebidasFrias"
   },
@@ -31,7 +31,7 @@ export const products: Product[] = [
     id: 4,
     name: "Frappe de Fresa",
     price: 10,
-    image: "../public/fresa.png",
+    image: "/fresa.png",
     description: "Refrescante frappe preparado con fresa natural.",
     category: "bebidasFrias"
   },
@@ -39,7 +39,7 @@ export const products: Product[] = [
     id: 5,
     name: "Frappe de Fresa con Arándanos",
     price: 10,
-    image: "../public/fresa-arandano.png",
+    image: "/fresa-arandano.png",
     description: "Mezcla frutal de fresa y arándanos con hielo frappé.",
     category: "bebidasFrias"
   },
@@ -47,7 +47,7 @@ export const products: Product[] = [
     id: 6,
     name: "Frappe de Maracumango",
     price: 10,
-    image: "../public/maracumango.png",
+    image: "/maracumango.png",
     description: "Exótica mezcla de maracuyá y mango en una bebida helada.",
     category: "bebidasFrias"
   },
@@ -55,7 +55,7 @@ export const products: Product[] = [
     id: 7,
     name: "Frappe de Caramelo",
     price: 10,
-    image: "../public/caramelo.png",
+    image: "/caramelo.png",
     description: "Frappe suave con caramelo dulce y crema.",
     category: "bebidasFrias"
   },
@@ -63,7 +63,7 @@ export const products: Product[] = [
     id: 8,
     name: "Frappe de Algarrobina",
     price: 10,
-    image: "../public/algarrobina.png",
+    image: "/algarrobina.png",
     description: "Sabor peruano clásico con algarrobina y hielo frappé.",
     category: "bebidasFrias"
   },
@@ -71,7 +71,7 @@ export const products: Product[] = [
     id: 9,
     name: "Frappe de Lúcuma",
     price: 10,
-    image: "../public/lucuma.png",
+    image: "/lucuma.png",
     description: "Frappe dulce de lúcuma con textura cremosa.",
     category: "bebidasFrias"
   },
@@ -81,7 +81,7 @@ export const products: Product[] = [
     id: 10,
     name: "Expresso",
     price: 4,
-    image: "../public/expresso.png",
+    image: "/expresso.png",
     description: "Café espresso intenso preparado al momento.",
     category: "bebidasCalientes"
   },
@@ -89,7 +89,7 @@ export const products: Product[] = [
     id: 11,
     name: "Americano",
     price: 5,
-    image: "../public/americano.png",
+    image: "/americano.png",
     description: "Café espresso suavizado con agua caliente.",
     category: "bebidasCalientes"
   },
@@ -97,7 +97,7 @@ export const products: Product[] = [
     id: 12,
     name: "Capuchino",
     price: 7,
-    image: "../public/capu.png",
+    image: "/capu.png",
     description: "Espresso con leche vaporizada y espuma cremosa.",
     category: "bebidasCalientes",
     featured: true
@@ -106,7 +106,7 @@ export const products: Product[] = [
     id: 13,
     name: "Mocachino",
     price: 8,
-    image: "../public/mocaccino.png",
+    image: "/mocaccino.png",
     description: "Mezcla de café, chocolate y leche espumada.",
     category: "bebidasCalientes"
   },
@@ -114,7 +114,7 @@ export const products: Product[] = [
     id: 14,
     name: "Chocolate Caliente",
     price: 8,
-    image: "../public/chocolate.png",
+    image: "/chocolate.png",
     description: "Chocolate caliente cremoso ideal para acompañar postres.",
     category: "bebidasCalientes"
   },
@@ -124,7 +124,7 @@ export const products: Product[] = [
     id: 15,
     name: "Empanada de Pollo",
     price: 4,
-    image: "../public/empanada-pollo.jpg",
+    image: "/empanada-pollo.jpg",
     description: "Empanada horneada rellena de pollo sazonado.",
     category: "comida"
   },
@@ -132,7 +132,7 @@ export const products: Product[] = [
     id: 16,
     name: "Sandwich Mixto",
     price: 3,
-    image: "../public/sandwich-mixto.jpg",
+    image: "/sandwich-mixto.jpg",
     description: "Sandwich de jamón con queso tostado en waflera.",
     category: "comida"
   },
@@ -140,7 +140,7 @@ export const products: Product[] = [
     id: 17,
     name: "Pie de Manzana",
     price: 4,
-    image: "../public/pie-manzana.jpg",
+    image: "/pie-manzana.jpg",
     description: "Postre clásico con relleno dulce de manzana.",
     category: "postres"
   },
@@ -148,7 +148,7 @@ export const products: Product[] = [
     id: 18,
     name: "Keke de Naranja",
     price: 3,
-    image: "../public/keke-naranja.jpg",
+    image: "/keke-naranja.jpg",
     description: "Bizcocho suave con sabor natural a naranja.",
     category: "postres"
   },
@@ -156,7 +156,7 @@ export const products: Product[] = [
     id: 19,
     name: "Croasant de Pollo",
     price: 8,
-    image: "../public/croasam.png",
+    image: "/croasam.png",
     description: "Croasant relleno de pollo deshilachado, lechuga, mayonesa y apio.",
     category: "comida",
     featured: true
@@ -167,7 +167,7 @@ export const products: Product[] = [
     id: 20,
     name: "Café Molido para Cafetera Eléctrica (1/4kg)",
     price: 17,
-    image: "../public/empaque (2).png",
+    image: "/empaque (2).png",
     description: "Café molido ideal para cafeteras eléctricas.",
     category: "cafe",
     featured: true
@@ -176,7 +176,7 @@ export const products: Product[] = [
     id: 21,
     name: "Café Molido para Moka (1/4kg)",
     price: 17,
-    image: "../public/empaque (2).png",
+    image: "/empaque (2).png",
     description: "Molienda especial perfecta para cafetera moka italiana.",
     category: "cafe"
   },
@@ -184,7 +184,7 @@ export const products: Product[] = [
     id: 22,
     name: "Café Molido para Prensa Francesa (1/4kg)",
     price: 17,
-    image: "../public/empaque (2).png",
+    image: "/empaque (2).png",
     description: "Molienda gruesa perfecta para prensa francesa.",
     category: "cafe"
   },
@@ -192,7 +192,7 @@ export const products: Product[] = [
     id: 23,
     name: "Café en Grano Tostado (1/4kg)",
     price: 17,
-    image: "../public/empaque (2).png",
+    image: "/empaque (2).png",
     description: "Granos de café tostados listos para moler y preparar.",
     category: "cafe"
   }

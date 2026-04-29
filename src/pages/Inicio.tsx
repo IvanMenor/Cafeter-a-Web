@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import '../App.css'
 import Hero from '../components/Hero'
 import Carousel from '../components/Carousel'
@@ -7,7 +6,6 @@ import FeaturedProducts from '../components/FeaturedProducts'
 import Footer from '../components/Footer'
 
 function Inicio() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
