@@ -20,7 +20,7 @@ export default function MenuLocal() {
   return (
     <section className="bg-[#E8E3DC] py-5 px-6">
 
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto mb-16">
 
         {/* FILTROS */}
         <div className="flex justify-center flex-wrap gap-3 mb-20">

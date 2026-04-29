@@ -31,14 +31,14 @@ const Navbar = () => {
           : "bg-[#E8E3DC]"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 h-23 flex items-center justify-between">
         
         {/* Logo + texto */}
         <div className="flex items-center gap-3">
           <img
             src="/ronellogo.png"
             alt="logo"
-            className="h-12 md:h-14 w-auto object-contain"
+            className="h-12 md:h-20 w-auto object-contain"
           />
 
           <div className="leading-tight">

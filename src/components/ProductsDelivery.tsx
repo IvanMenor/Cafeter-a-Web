@@ -4,10 +4,13 @@ export default function DeliveryProducts() {
 
   const coffee = products.filter(p => p.category === "cafe")
 
-  return (
-    <section className="bg-[#E8E3DC] py-5 px-6">
+  const whatsappMessage = "Hola, me gustaría comprar este café. ¿Podrían darme más información?"
+  const whatsappLink = `https://wa.me/51923320189?text=${encodeURIComponent(whatsappMessage)}`
 
-      <div className="max-w-7xl mx-auto">
+  return (
+    <section className="bg-[#E8E3DC] py-5 px-6 ">
+
+      <div className="max-w-7xl mx-auto mb-16">
 
         <div className="text-center mb-16">
           <h2 className="text-4xl font-semibold text-[#3A2E23]">
@@ -35,13 +38,22 @@ export default function DeliveryProducts() {
                 {product.name}
               </h3>
 
-              <p className="text-sm text-[#6B4C3B] mt-2">
+              <p className="text-sm text-[#6B4C3B] mt-2 line-clamp-2">
                 {product.description}
               </p>
 
               <div className="mt-3 font-semibold text-[#A76B2B]">
                 S/ {product.price.toFixed(2)}
               </div>
+
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-4 px-5 py-2 bg-[#3A2E23] text-white rounded-full text-sm hover:bg-[#5a4736] transition"
+              >
+                Comprar
+              </a>
 
             </div>
 
