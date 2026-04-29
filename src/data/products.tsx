@@ -165,35 +165,35 @@ export const products: Product[] = [
   // CAFÉ PARA LLEVAR
   {
     id: 20,
-    name: "Café Molido para Cafetera Eléctrica (1/4kg)",
+    name: "Café Molido para Cafetera Eléctrica",
     price: 17,
     image: "../public/empaque (2).png",
-    description: "Café molido ideal para cafeteras eléctricas.",
+    description: "1/4 Kg de café molido ideal para cafeteras eléctricas.",
     category: "cafe",
     featured: true
   },
   {
     id: 21,
-    name: "Café Molido para Moka (1/4kg)",
+    name: "Café Molido para Moka",
     price: 17,
     image: "../public/empaque (2).png",
-    description: "Molienda especial perfecta para cafetera moka italiana.",
+    description: "1/4 Kg de molienda especial perfecta para cafetera moka italiana.",
     category: "cafe"
   },
   {
     id: 22,
-    name: "Café Molido para Prensa Francesa (1/4kg)",
+    name: "Café Molido para Prensa Francesa",
     price: 17,
     image: "../public/empaque (2).png",
-    description: "Molienda gruesa perfecta para prensa francesa.",
+    description: "1/4 Kg de molienda gruesa perfecta para prensa francesa.",
     category: "cafe"
   },
   {
     id: 23,
-    name: "Café en Grano Tostado (1/4kg)",
+    name: "Café en Grano Tostado",
     price: 17,
     image: "../public/empaque (2).png",
-    description: "Granos de café tostados listos para moler y preparar.",
+    description: "1/4 Kg de granos de café tostados listos para moler y preparar.",
     category: "cafe"
   }
 ]

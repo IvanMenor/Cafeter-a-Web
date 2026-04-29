@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 export default function Footer() {
   return (
-    <footer className="bg-[#4A2E1F] text-white ">
+    <footer className="bg-[#4A2E1F] text-white">
 
       <div className="max-w-7xl mx-auto px-6 py-14">
 
@@ -25,13 +26,31 @@ export default function Footer() {
             <h3 className="font-semibold text-lg mb-4">Navegación</h3>
 
             <ul className="space-y-2 text-gray-300 text-sm">
-              <li className="hover:text-white transition cursor-pointer">Inicio</li>
-              <li className="hover:text-white transition cursor-pointer">Productos</li>
-              <li className="hover:text-white transition cursor-pointer">Nosotros</li>
-              <li className="hover:text-white transition cursor-pointer">Locales</li>
+              <li>
+                <Link to="/" className="hover:text-white transition cursor-pointer">
+                  Inicio
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/Menu" className="hover:text-white transition cursor-pointer">
+                  Menú Local
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/Delivery" className="hover:text-white transition cursor-pointer">
+                  Delivery
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/Nosotros" className="hover:text-white transition cursor-pointer">
+                  Nosotros
+                </Link>
+              </li>
             </ul>
           </div>
-
           {/* HORARIOS */}
           <div>
             <h3 className="font-semibold text-lg mb-4">Horario</h3>
@@ -55,7 +74,7 @@ export default function Footer() {
 
             {/* REDES */}
             <div className="flex gap-4 mt-4">
-                
+
               <div className="hover:scale-110 transition cursor-pointer">
                 Facebook
               </div>
