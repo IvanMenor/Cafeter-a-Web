@@ -1,92 +1,90 @@
-import { useState } from "react"
 import { products } from "../data/products"
-
-const categories = [
-  { id: "todos", label: "Todo" },
-  { id: "bebidasFrias", label: "Bebidas frías" },
-  { id: "bebidasCalientes", label: "Bebidas calientes" },
-  { id: "postres", label: "Para acompañar" }
-]
 
 export default function MenuLocal() {
 
-  const [category, setCategory] = useState("todos")
+  // Solo las categorías que quieres mostrar
+  const validCategories = ["bebidasFrias", "bebidasCalientes", "postres"]
 
-  const filtered =
-    category === "todos"
-      ? products.filter(p => p.category !== "cafe")
-      : products.filter(p => p.category === category)
+  // Agrupar productos por categoría
+  const grouped = validCategories.map(category => ({
+    category,
+    items: products.filter(p => p.category === category)
+  }))
+
+  // Función para título bonito
+  const getTitle = (cat: string) => {
+    switch (cat) {
+      case "bebidasFrias": return "Bebidas Frías"
+      case "bebidasCalientes": return "Bebidas Calientes"
+      case "postres": return "Postres"
+      default: return cat
+    }
+  }
+
+  // 👇 Aquí elegimos SOLO 1 imagen por categoría (la primera)
+  const getImage = (items: any[]) => items[0]?.image
 
   return (
-    <section className="bg-[#E8E3DC] py-5 px-6">
+    <section className="bg-[#E8E3DC]">
 
-      <div className="max-w-7xl mx-auto mb-16">
+      {grouped.map(group => {
 
-        {/* FILTROS */}
-        <div className="flex justify-center flex-wrap gap-3 mb-20">
+        const bgImage = getImage(group.items)
 
-          {categories.map(cat => (
+        return (
+          <div
+            key={group.category}
+            className="relative min-h-[80vh] flex items-center justify-center px-4 py-16"
+            style={{
+              backgroundImage: `url(${bgImage})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center"
+            }}
+          >
 
-            <button
-              key={cat.id}
-              onClick={() => setCategory(cat.id)}
-              className={`px-6 py-2 rounded-full text-sm transition
-              ${category === cat.id
-                  ? "bg-[#3A2E23] text-white"
-                  : "bg-white hover:bg-[#f3eee8]"}`}
-            >
-              {cat.label}
-            </button>
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/60"></div>
 
-          ))}
+            {/* Contenido */}
+            <div className="relative z-10 max-w-4xl w-full">
 
-        </div>
+              {/* Título */}
+              <h2 className="text-3xl sm:text-4xl font-bold text-center text-white mb-10">
+                {getTitle(group.category)}
+              </h2>
 
-        {/* PRODUCTOS */}
-        <div className="grid gap-x-12 gap-y-20 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {/* Lista */}
+              <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl p-6 sm:p-8 space-y-5">
 
-          {filtered.map(product => (
+                {group.items.map(item => (
+                  <div
+                    key={item.id}
+                    className="flex justify-between items-start border-b pb-3 last:border-none"
+                  >
 
-            <div
-              key={product.id}
-              className="group"
-            >
+                    <div className="pr-4">
+                      <h3 className="font-semibold text-[#3A2E23] text-base sm:text-lg">
+                        {item.name}
+                      </h3>
+                      <p className="text-sm text-[#6B4C3B]">
+                        {item.description}
+                      </p>
+                    </div>
 
-              {/* IMAGEN */}
-              <div className="h-56 flex items-center justify-center mb-6">
+                    <div className="font-semibold text-[#A76B2B] whitespace-nowrap">
+                      S/ {item.price.toFixed(2)}
+                    </div>
 
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="max-h-full object-contain transition duration-500 group-hover:scale-105"
-                />
-
-              </div>
-
-              {/* INFO */}
-              <div className="text-center space-y-3">
-
-                <h3 className="text-lg font-semibold text-[#3A2E23]">
-                  {product.name}
-                </h3>
-
-                <p className="text-sm text-[#6B4C3B] leading-relaxed max-w-[260px] mx-auto">
-                  {product.description}
-                </p>
-
-                <div className="text-lg font-semibold text-[#A76B2B] pt-2">
-                  S/ {product.price.toFixed(2)}
-                </div>
+                  </div>
+                ))}
 
               </div>
 
             </div>
 
-          ))}
-
-        </div>
-
-      </div>
+          </div>
+        )
+      })}
 
     </section>
   )
